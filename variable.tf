@@ -55,6 +55,11 @@ variable "username" {
   type        = string
   default = "sunil"
 }
+variable "password" {
+  description = "Password to be used"
+  type        = string
+  default = "password@123"
+}
 variable "PUBLIC_SSH_KEY" {
   description = "Public Key to be used"
   type        = string
