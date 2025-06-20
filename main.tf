@@ -59,6 +59,7 @@ disk {
     ipconfig0 = "ip=${var.ipaddress}/24,gw=192.168.1.1"
     nameserver = var.nameserver
     ciuser = var.username
+    cipassword = var.password
     ciupgrade = "1"
     sshkeys = var.PUBLIC_SSH_KEY
 }
