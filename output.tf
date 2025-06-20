@@ -1,7 +1,7 @@
-output "vm_name" {
+output "name" {
   value = var.name
 }
 
-output "vm_ip" {
+output "ipaddress" {
   value = var.ipaddress
 }
