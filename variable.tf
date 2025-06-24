@@ -17,7 +17,10 @@ variable "vmid" {
   description = "VMid to be used"
   type        = number
 }
-
+variable "tags" {
+  type    = list(string)
+#default = ["dev", "webserver"]
+}
 variable "templatename" {
   description = "Templatename"
   type        = string

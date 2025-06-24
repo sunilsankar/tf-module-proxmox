@@ -14,7 +14,8 @@ resource "proxmox_vm_qemu" "vm" {
     clone = var.templatename
     # full_clone = true
     full_clone = true
-
+    ## Adding tags
+    tags = join(",", var.tags)
     # -- boot process
     onboot = true
     startup = ""
