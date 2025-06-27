@@ -67,5 +67,19 @@ variable "PUBLIC_SSH_KEY" {
   description = "Public Key to be used"
   type        = string
 }
+### Remote Execution ####
+variable "script_path" {
+  description = "Path to the executable script"
+  type        = string
+  default     = null
+  nullable    = true
 
+  validation {
+    condition     = var.script_path == null || (
+      can(fileexists(var.script_path)) && 
+      can(regex(".*\\.(sh|ps1)$", var.script_path))
+    )
+    error_message = "Must be a valid path to a script file (ending with .sh or .ps1) or null"
+  }
+}
 

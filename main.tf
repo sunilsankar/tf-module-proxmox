@@ -63,4 +63,7 @@ disk {
     cipassword = var.password
     ciupgrade = "1"
     sshkeys = var.PUBLIC_SSH_KEY
+    
+ provisioner "local-exec" {
+    command = var.script_path != null ? "bash ${var.script_path}" : "echo 'No script provided, skipping execution'"
 }
