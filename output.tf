@@ -5,3 +5,7 @@ output "name" {
 output "ipaddress" {
   value = var.ipaddress
 }
+
+output "tags" {
+  value = var.tags
+}
