@@ -67,3 +67,4 @@ disk {
  provisioner "local-exec" {
     command = var.script_path != null ? "bash ${var.script_path}" : "echo 'No script provided, skipping execution'"
 }
+}
