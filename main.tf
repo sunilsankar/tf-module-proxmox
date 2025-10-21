@@ -1,6 +1,6 @@
 resource "proxmox_vm_qemu" "vm" {
     name = var.name
-    desc = var.description
+    description = var.description
     agent = 1
     target_node = var.nodename
     qemu_os = "other"  # default other
