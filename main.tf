@@ -17,7 +17,7 @@ resource "proxmox_vm_qemu" "vm" {
     ## Adding tags
     tags = join(",", var.tags)
     # -- boot process
-    onboot = true
+    start_at_node_boot = true
     startup = ""
     automatic_reboot = true  # refuse auto-reboot when changing a setting
     cpu {
